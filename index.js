@@ -495,7 +495,17 @@ const timetables = [
     }
 ]
 
-
+function moveElement(arr, fromIndex, toIndex) {
+    
+    if (fromIndex >= 0 && fromIndex < arr.length && toIndex >= 0 && toIndex < arr.length) {
+      const removedElement = arr.splice(fromIndex, 1)[0];
+      arr.splice(toIndex, 0, removedElement);
+  
+      return arr; 
+    } else {
+      throw new Error("Invalid indices provided"); // Handle invalid indices
+    }
+  };
 
 
 function printCourses() {
@@ -561,17 +571,7 @@ function printCourses() {
     }
     console.log(timetables)
 };
-function moveElement(arr, fromIndex, toIndex) {
-    
-    if (fromIndex >= 0 && fromIndex < arr.length && toIndex >= 0 && toIndex < arr.length) {
-      const removedElement = arr.splice(fromIndex, 1)[0];
-      arr.splice(toIndex, 0, removedElement);
-  
-      return arr; 
-    } else {
-      throw new Error("Invalid indices provided"); // Handle invalid indices
-    }
-  };
+
 function checkCorrupts() {
     let similars = [];
     for(let i = 0; i < timetables.length; i++){
