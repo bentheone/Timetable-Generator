@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    table, th, td {
+      border: 1px solid rgb(211, 128, 3);
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .edit-btn, .save-btn {
+      padding: 8px 15px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .edit-btn {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .save-btn {
+      background-color: #008CBA;
+      color: white;
+      display: none;
+    }
+
+    .edit-mode input {
+      border: 1px solid #4CAF50;
+    }
+  </style>
+  <title>Timetable</title>
+</head>
+<body>
+
+  <button class="edit-btn" onclick="enableEditMode()">Edit</button>
+  <button class="save-btn" onclick="saveChanges()">Save</button>
+
+  <table id="timetable">
+    <thead>
+      <tr>
+        <th>DAYS</th>
+        <th>9:00</th>
+        <th>10:00</th>
+        <th>11:00</th>
+        <th>12:00</th>
+        <th>13:00</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>MONDAY</td>
+        <td class="edit-mode"><input type="text" value="type lesson"></td>
+        <td class="edit-mode"><input type="text" value="type lesson"></td>
+        <td class="edit-mode"><input type="text" value="type lesson"></td>
+        <td class="edit-mode"><input type="text" value="type lesson"></td>
+        <td class="edit-mode"><input type="text" value="type lesson"></td>
+      </tr>
+      <td>TUESDAY</td>
+      <td class="edit-mode"><input type="text" value="type lesson"></td>
+      <td class="edit-mode"><input type="text" value="type lesson"></td>
+      <td class="edit-mode"><input type="text" value="type lesson"></td>
+      <td class="edit-mode"><input type="text" value="type lesson"></td>
+      <td class="edit-mode"><input type="text" value="type lesson"></td>
+    </tr>
+    <td>WEDNESDAY</td>
+    <td class="edit-mode"><input type="text" value="type lesson"></td>
+    <td class="edit-mode"><input type="text" value="type lesson"></td>
+    <td class="edit-mode"><input type="text" value="type lesson"></td>
+    <td class="edit-mode"><input type="text" value="type lesson"></td>
+    <td class="edit-mode"><input type="text" value="type lesson"></td>
+  </tr>
+  <td>THURSDAY</td>
+  <td class="edit-mode"><input type="text" value="type lesson"></td>
+  <td class="edit-mode"><input type="text" value="type lesson"></td>
+  <td class="edit-mode"><input type="text" value="type lesson"></td>
+  <td class="edit-mode"><input type="text" value="type lesson"></td>
+  <td class="edit-mode"><input type="text" value="type lesson"></td>
+</tr>
+<td>FRIDAY</td>
+<td class="edit-mode"><input type="text" value="type lesson"></td>
+<td class="edit-mode"><input type="text" value="type lesson"></td>
+<td class="edit-mode"><input type="text" value="type lesson"></td>
+<td class="edit-mode"><input type="text" value="type lesson"></td>
+<td class="edit-mode"><input type="text" value="type lesson"></td>
+</tr>
+      <!-- Add more rows as needed -->
+      
+    </body>
+  </table>
+
+  <script>
+    let editMode = false;
+
+    function enableEditMode() {
+      editMode = true;
+      document.querySelectorAll('.edit-mode input').forEach(input => {
+        input.removeAttribute('readonly');
+      });
+      document.querySelector('.edit-btn').style.display = 'none';
+      document.querySelector('.save-btn').style.display = 'inline-block';
+    }
+
+    function saveChanges() {
+      if (validateInputs()) {
+        editMode = false;
+        document.querySelectorAll('.edit-mode input').forEach(input => {
+          input.setAttribute('readonly', 'readonly');
+        });
+        document.querySelector('.edit-btn').style.display = 'inline-block';
+        document.querySelector('.save-btn').style.display = 'none';
+      } else {
+        alert('Please fill in all fields.');
+      }
+    }
+
+    function validateInputs() {
+      let isValid = true;
+      document.querySelectorAll('.edit-mode input').forEach(input => {
+        if (!input.value.trim()) {
+          isValid = false;
+        }
+      });
+      return isValid;
+    }
+  </script>
+
+</body>
+</html>
