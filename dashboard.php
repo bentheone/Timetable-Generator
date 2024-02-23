@@ -118,7 +118,7 @@
                         <tbody>
                             <th>
                             <button type="button" class="button1">
-                                <div class="button-text1">add new TT</div>
+                                <a href="edit.php" class="button-text1">add new TT</a>
                                 <div class="button-icon">
                                     <ion-icon name="add-circle-outline"></ion-icon>
                                 </div>

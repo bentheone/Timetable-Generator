@@ -597,4 +597,6 @@ function checkCorrupts() {
   
 printCourses()
 checkCorrupts()
-// correctCorrupts()
+//correctCorrupts()
+
+export { timetables }
