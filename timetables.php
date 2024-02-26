@@ -29,7 +29,7 @@
                     <span class="nav-item">Time Table </span>
 
                 </a></li>
-                <li><a href="login and registration.html">
+                <li><a href="login.php">
                     <i class=" fas fa-sign-out-alt"></i>
                     <span class="nav-item">Login</span>
 
@@ -56,106 +56,6 @@
             </div>
   
             <section class="Attendance">
-                <div class="attendance-list">
-                    <!-- <h1 id="ttName"></h1>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Days</th>
-                                <th>8:30 AM</th>
-                                <th>9:10 AM</th>
-                                <th>9:50 AM</th>
-                                <th>11:30 AM</th>
-                                <th>12:00 PM</th>
-                                <th>1:00 PM</th>>
-                                <th>11:30 AM</th>
-                                <th>12:00 PM</th>
-                                <th>1:00 PM</th>
-                                <th>1:00 PM</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-
-                            <tr>
-                                <td>Monday</td>
-                                <td contenteditable="true" class='course_cell'> </td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                
-                                
-                                
-                            </tr>
-                            <tr>
-                                <td>Tuesday</td>
-                                <td contenteditable="true" class='course_cell'> </td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                
-                                
-                            </tr>
-                            <tr class="active">
-                                <td>Wednesday</td>
-                                <td contenteditable="true" class='course_cell'> </td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                
-                                
-                            </tr>
-                            <tr>
-                                <td>Thursday</td>   
-                                <td contenteditable="true" class='course_cell'> </td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                               
-                                
-                            </tr>
-                            <tr>
-                                <td>Friday</td>
-                                <td contenteditable="true" class='course_cell'> </td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                                <td contenteditable="true" class='course_cell'></td>
-                               
-                                
-                            </tr> -->
-                           
-                        </tbody>
-                    </table>
-                </div>
                 
             </section>
         </section>

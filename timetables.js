@@ -1,66 +1,136 @@
 import { timetables } from './index.js';
+// console.log(timetables)
 
-
-// Function to dynamically create and display the timetables
-function createAndDisplayTimetables() {
-    const container = document.querySelector('.main .attendance-list');
+const timetablesSection = document.getElementsByClassName('Attendance')[0]
+function createTimetable(timetable){
+    const table = document.createElement('div');
+    table.classList.add('attendance-list')
+    table.innerHTML = `
     
-    // Clear existing content
-    container.innerHTML = '';
+    <h1>${timetable.name}</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Days</th>
+                <th>8:30 AM</th>
+                <th>9:10 AM</th>
+                <th>9:50 AM</th>
+                <th>11:30 AM</th>
+                <th>12:00 PM</th>
+                <th>1:00 PM</th>>
+                <th>11:30 AM</th>
+                <th>12:00 PM</th>
+                <th>1:00 PM</th>
+                <th>1:00 PM</th>
+            </tr>
+        </thead>
+        <tbody>
 
-    // Iterate through each timetable
-    timetables.forEach(timetable => {
-        // Create elements for the timetable
-        const timetableTitle = document.createElement('h1');
-        timetableTitle.textContent = `TIME TABLE GENERATOR - ${timetable.className}`;
+            <tr>
+                <td>Monday</td>
+                <td id = "cell-0" contenteditable="true" class='course_cell'> </td>
+                <td id = "cell-1" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-2" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-3" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-4" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-5" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-6" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-7" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-8" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-9" contenteditable="true" class='course_cell'></td>
+                
+                
+                
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td id = "cell-10" contenteditable="true" class='course_cell'> </td>
+                <td id = "cell-11" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-12" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-13" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-14" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-15" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-16" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-17" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-18" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-19" contenteditable="true" class='course_cell'></td>
+                
+                
+            </tr>
+            <tr class="active">
+                <td>Wednesday</td>
+                <td id = "cell-20" contenteditable="true" class='course_cell'> </td>
+                <td id = "cell-21" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-22" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-23" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-24" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-25" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-26" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-27" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-28" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-29" contenteditable="true" class='course_cell'></td>
+                
+                
+            </tr>
+            <tr>
+                <td>Thursday</td>   
+                <td id = "cell-30" contenteditable="true" class='course_cell'> </td>
+                <td id = "cell-31" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-32" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-33" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-34" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-35" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-36" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-37" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-38" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-39" contenteditable="true" class='course_cell'></td>
+               
+                
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td id = "cell-40" contenteditable="true" class='course_cell'> </td>
+                <td id = "cell-41" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-42" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-43" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-44" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-45" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-46" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-47" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-48" contenteditable="true" class='course_cell'></td>
+                <td id = "cell-49" contenteditable="true" class='course_cell'></td>
+               
+                
+            </tr>
+           
+        </tbody>
+    </table>
+    `
+    timetablesSection.appendChild(table);
 
-        const table = document.createElement('table');
-        table.classList.add('table');
+    // Function to add courses
+    
+    const timetableIndex = timetables.indexOf(timetable);
+    const cells = document.querySelectorAll(`.attendance-list:nth-child(${timetableIndex + 1}) .course_cell`);
+    let courses = timetable.courses;
 
-        const tableHead = document.createElement('thead');
-        const tableBody = document.createElement('tbody');
-
-        const headerRow = document.createElement('tr');
-        headerRow.innerHTML = `
-            <th>Days</th>
-            <th>8:30 AM</th>
-            <th>9:10 AM</th>
-            <th>9:50 AM</th>
-            <th>10:50 AM</th>
-            <th>11:30 AM</th>
-            <th>12:10 PM</th>
-            <th>12:50 PM</th>
-            <th>2:20 PM</th>
-            <th>3:00 PM</th>
-            <th>3:40 PM</th>
-        `;
-        tableHead.appendChild(headerRow);
-
-        // Iterate through the days and courses
-        timetable.courses.forEach(course => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${course.day}</td>
-                <td contenteditable="true" class='course_cell'>${course.time830}</td>
-                <td contenteditable="true" class='course_cell'>${course.time910}</td>
-                <td contenteditable="true" class='course_cell'>${course.time950}</td>
-                <td contenteditable="true" class='course_cell'>${course.time1130}</td>
-                <td contenteditable="true" class='course_cell'>${course.time1200}</td>
-                <td contenteditable="true" class='course_cell'>${course.time100}</td>
-                <td contenteditable="true" class='course_cell'>${course.time1130}</td>
-                <td contenteditable="true" class='course_cell'>${course.time1200}</td>
-                <td contenteditable="true" class='course_cell'>${course.time100}</td>
-                <td contenteditable="true" class='course_cell'>${course.time100}</td>
-            `;
-            tableBody.appendChild(row);
-        });
-
-        // Append elements to the container
-        container.appendChild(timetableTitle);
-        table.appendChild(tableHead);
-        table.appendChild(tableBody);
-        container.appendChild(table);
+    // Assuming courses is an array of course names
+    courses.forEach((course, index) => {
+        const cell = cells[index];
+        if (cell) {
+            cell.textContent = course;
+        }
     });
+
+
+    
 }
 
+function createAndDisplayTimetables() {
+    timetables.forEach(timetable => {
+        createTimetable(timetable);
+    });
+    
+}
+    
 createAndDisplayTimetables();

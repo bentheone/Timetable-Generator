@@ -17,7 +17,8 @@ const teachers = [
                         sessions: 1
                     }                       
                 ]
-            },{
+            },
+            {
                 name:'L5SOD A',
                 courses : [
                     {
@@ -593,9 +594,24 @@ function checkCorrupts() {
     //console.log(corrruptTt);
     
 }
+function addFeetimes() {
+    timetables.forEach(timetable => {
+        let tt = timetable.courses;
+        if(tt.length < 50){
+            let freeTimes = 50 - tt.length;
+            for(let i=0; i<freeTimes; i++) {
+                randomIndex = Math.floor(Math.random() * (49 - i)) + i;
+                insertIntoArray(tt, "F", randomIndex);
+            }
+
+        }
+    })
+}
 
   
 printCourses()
 checkCorrupts()
+addFeetimes()
+console.log(timetables)
 
 export { timetables }
