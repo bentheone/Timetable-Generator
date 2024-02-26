@@ -1,4 +1,4 @@
-import { timetables } from './timetables.js';
+import { timetables } from './index.js';
 
 
 // Function to dynamically create and display the timetables

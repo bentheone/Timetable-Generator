@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Teaches</title>
+    <link rel="stylesheet" href="style4.css">
+    <script>
+        function toggleClassesVisibility() {
+            var classesDiv = document.getElementById("classesDiv");
+            if (classesDiv.style.display === "none") {
+                classesDiv.style.display = "block";
+            } else {
+                classesDiv.style.display = "none";
+            }
+        }
+
+        window.onload = function() {
+            var teacherName = sessionStorage.getItem("teacherName");
+            if (teacherName) {
+                document.getElementById("teacherTeaches").innerText = teacherName + " Teaches";
+            }
+
+            var links = document.querySelectorAll('.class-link');
+            links.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    // Remove background color from previously selected link
+                    var prevSelected = document.querySelector('.class-link.selected');
+                    if (prevSelected) {
+                        prevSelected.classList.remove('selected');
+                    }
+                    // Add background color to the clicked link
+                    this.classList.add('selected');
+                    // Store selected class in sessionStorage
+                    sessionStorage.setItem("selectedClass", this.innerText.trim());
+                });
+            });
+        };
+
+
+
+
+
+
+
+
+
+        
+        window.onload = function() {
+    var teacherName = sessionStorage.getItem("teacherName");
+    if (teacherName) {
+        document.getElementById("teacherTeaches").innerText = teacherName + " Teaches";
+    }
+
+    var links = document.querySelectorAll('.class-link');
+    links.forEach(function(link) {
+        link.addEventListener('click', function() {
+            // Remove background color from previously selected link
+            var prevSelected = document.querySelector('.class-link.selected');
+            if (prevSelected) {
+                prevSelected.classList.remove('selected');
+            }
+            // Add background color to the clicked link
+            this.classList.add('selected');
+            // Store selected class in sessionStorage
+            sessionStorage.setItem("selectedClass", this.innerText.trim());
+        });
+    });
+
+    // Check if a link was previously selected and reapply the 'selected' class
+    var selectedClass = sessionStorage.getItem("selectedClass");
+    if (selectedClass) {
+        var selectedLink = document.getElementById("class_" + selectedClass.replace(/\s/g, '_'));
+        if (selectedLink) {
+            selectedLink.classList.add('selected');
+        }
+    }
+};
+
+    </script>
+    <script>
+        window.onload = function() {
+    var teacherName = sessionStorage.getItem("teacherName");
+    if (teacherName) {
+        document.getElementById("teacherTeaches").innerText = teacherName + " Teaches";
+        
+        // Check if the teacher's name is Revocathe or Annonciatha
+        if (teacherName === "Revocathe") {
+            // Display all classes
+            document.getElementById("classesDiv").style.display = "block";
+        } else if (teacherName === "Annonciatha") {
+            // Display only specific classes
+            var classesToDisplay = document.querySelectorAll('.class-link');
+            classesToDisplay.forEach(function(classLink) {
+                if (classLink.id === "class_L4_SOD_A" || classLink.id === "class_L4_SOD_B") {
+                    classLink.style.display = "block";
+                } else {
+                    classLink.style.display = "none";
+                }
+            });
+            // Show the container div
+            document.getElementById("classesDiv").style.display = "block";
+        } else {
+            // Hide all classes if the teacher's name is neither Revocathe nor Annonciatha
+            document.getElementById("classesDiv").style.display = "none";
+        }
+    }
+
+    var links = document.querySelectorAll('.class-link');
+    links.forEach(function(link) {
+        link.addEventListener('click', function() {
+            // Remove background color from previously selected link
+            var prevSelected = document.querySelector('.class-link.selected');
+            if (prevSelected) {
+                prevSelected.classList.remove('selected');
+            }
+            // Add background color to the clicked link
+            this.classList.add('selected');
+            // Store selected class in sessionStorage
+            sessionStorage.setItem("selectedClass", this.innerText.trim());
+        });
+    });
+
+    // Check if a link was previously selected and reapply the 'selected' class
+    var selectedClass = sessionStorage.getItem("selectedClass");
+    if (selectedClass) {
+        var selectedLink = document.getElementById("class_" + selectedClass.replace(/\s/g, '_'));
+        if (selectedLink) {
+            selectedLink.classList.add('selected');
+        }
+    }
+};
+
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <h2 id="teacherTeaches">Teacher Teaches</h2>
+        <form action="confirmation_page.html" method="post">
+            <div class="form-group">
+                <a href="#" onclick="toggleClassesVisibility()">Choose One</a><br><br>
+                <div id="classesDiv" style="display: none;">
+                    
+                    <a href="L4_SOD_A.html" class="class-link" id="class_L4_SOD_A">L4 SOD A</a><br>
+                    <a href="L4_SOD_B.html" class="class-link" id="class_L4_SOD_B">L4 SOD B</a><br>
+                    <a href="L4_CSA.html" class="class-link" id="class_L4_CSA">L4 CSA</a><br>
+                </div>
+            </div>
+            <div class="form-group">
+                <a href="log in phases.html" class="back-link">Back</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

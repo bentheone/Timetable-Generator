@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Login</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<style>
+    .form-group {
+        margin-bottom: 20px;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+    .suggested-names {
+        position: absolute;
+        background-color: rgba(226, 226,226);
+        border: 1px solid #4AD489;
+        max-height: 150px;
+        border-radius: 10px;
+        overflow-y: auto;
+        z-index: 1;
+    }
+    .suggested-names > div {
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    .suggested-names > div:hover {
+        background-color: #4AD489;
+    }
+</style>
+<body>
+    <div class="container">
+        <h2>Teacher Login</h2>
+        <form id="loginForm" action="next_login_form.html">
+            <div class="form-group">
+                <label for="teacher_name">Enter Teacher's Name:</label><br>
+                <input type="text" id="teacher_name" name="teacher_name" required>
+                <div class="suggested-names" id="suggestedNames"></div>
+            </div>
+           <input type="submit" class="next-link"  value="Next">
+        </form>
+    </div>
+    <script>
+        document.getElementById("teacher_name").addEventListener("input", function() {
+            var input = this.value.trim().toLowerCase();
+            var suggestedNames = document.getElementById("suggestedNames");
+            suggestedNames.innerHTML = "";
+
+            if (input.length === 0) return;
+
+            var names = ['Revocathe', 'Ryan', 'Rachel', 'Robert', 'Alex', 'Annonciatha', 'Aime', 'Benjamin', 'Bruce', 'Brown', 'Christian', 'Claudine', 'Claude', 'David', 'Daema', 'Embid', 'Erick', 'Enzo', 'Fique', 'Fernandez', 'Florence', 'Gloria', 'Gracia', 'Gatambiye', 'Ganza', 'Gashema', 'Hugue', 'Harden', 'Hugo', 'Habimana', 'Hirwa', 'Ines', 'Ice', 'Irving', 'Jairus', 'Jordan', 'Jamar', 'Juno', 'Jokic', 'Kenneth', 'Kyrie', 'Kuzma', 'Kyle', 'Kevin', 'Lewis', 'Louis', 'Lamelo', 'Lauri', 'Messi', 'Mann', 'Morant', 'Manzi' ]; 
+            var filteredNames = names.filter(function(name) {
+                return name.toLowerCase().startsWith(input);
+            });
+
+            filteredNames.forEach(function(name) {
+                var div = document.createElement("div");
+                div.textContent = name;
+                div.onclick = function() {
+                    document.getElementById("teacher_name").value = name;
+                    suggestedNames.innerHTML = "";
+                };
+                suggestedNames.appendChild(div);
+            });
+        });
+        document.getElementById("loginForm").onsubmit = function() {
+            var teacherName = document.getElementById("teacher_name").value;
+            sessionStorage.setItem("teacherName", teacherName);
+        };
+   
+    </script>
+</body>
+</html>
