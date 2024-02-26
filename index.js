@@ -579,11 +579,11 @@ function checkCorrupts() {
         for(let j = 0; j < tt.length; j++){
             for(let k = i + 1; k < timetables.length; k++){
                 if(tt[j] ==  timetables[k].courses[j]){
-                    let corruptTt = timetables[i].courses;
-                    console.log(`Found a corrupted teacher:${tt[j]} in class ${timetables[i].name} corrupted to ${timetables[k].courses[j]} in class ${timetables[k].name} on id ${j}`);
+                    //let corruptTt = timetables[i].courses;
                     similars.push(tt[j]);
-                    corruptIndex = j
+                    let corruptIndex = j
                     moveElement(timetables[i].courses, corruptIndex, corruptIndex + 1); 
+                    console.log(`Found a corrupted teacher:${tt[j]} in class ${timetables[i].name} corrupted to ${timetables[k].courses[j]} in class ${timetables[k].name} on id ${j}`);
                 }
             }
         }
@@ -597,6 +597,5 @@ function checkCorrupts() {
   
 printCourses()
 checkCorrupts()
-//correctCorrupts()
 
 export { timetables }
