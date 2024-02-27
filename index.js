@@ -1,5 +1,30 @@
 import { teachers } from './teachers.js';
-import { timetablesgit  } from './class-timetables.js';
+const timetables = [
+    {
+        name:'L4SOD A',
+        courses: []
+    },
+    {
+        name:'L4SOD B',
+        courses: ['David', 'Canisius','David','David']
+    },
+    // {
+    //     name:'L3PWO',
+    //     courses: []
+    // },
+    {
+        name:'L5SOD A',
+        courses: []
+    },
+    {
+        name:'L4CSA',
+        courses: []
+    },
+    {
+        name:'L4WOT',
+        courses: []
+    }
+]
 
 function moveElement(arr, fromIndex, toIndex) {
     
