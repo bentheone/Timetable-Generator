@@ -600,8 +600,8 @@ function addFeetimes() {
         if(tt.length < 50){
             let freeTimes = 50 - tt.length;
             for(let i=0; i<freeTimes; i++) {
-                randomIndex = Math.floor(Math.random() * (49 - i)) + i;
-                insertIntoArray(tt, "F", randomIndex);
+                let randomIndex = Math.floor(Math.random() * (49 - i)) + i;
+                tt.splice(randomIndex,0,"F");
             }
 
         }
