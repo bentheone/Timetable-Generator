@@ -92,8 +92,9 @@
         window.location.href = "timetables.php";
     }, 6000);
     }
-    function triggerFunctionOnAnotherPage() {
-    localStorage.setItem('runFunctionOnAnotherPage', 'true');
+
+    function triggerPrintCoursesFunction() {
+    localStorage.setItem('printTimetables', 'true');
     // window.location.href = "anotherPage.html";
 }
 

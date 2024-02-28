@@ -1,5 +1,8 @@
 import { timetables } from './index.js';
 // console.log(timetables)
+document.addEventListener('DOMContentLoaded', function () {
+    
+
 
 const timetablesSection = document.getElementsByClassName('Attendance')[0]
 function createTimetable(timetable){
@@ -132,5 +135,10 @@ function createAndDisplayTimetables() {
     });
     
 }
-    
-createAndDisplayTimetables();
+const printTimetablesFunction = localStorage.getItem('printTimetables')
+    if(printTimetablesFunction === 'true'){
+        document.getElementById('noTimetablesYetNotice').style.display='none';
+    createAndDisplayTimetables();
+ }
+   
+}); 
