@@ -20,6 +20,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['password']) && isset($
 
  if ($result && mysqli_num_rows($result) > 0) {
      $_SESSION["id"] = $row['id'];
+     $_SESSION["username"] = $result['username']
+     $_SESSION['']
 
     header("Location:dashboard.php");
     exit();
