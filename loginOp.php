@@ -19,9 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['password']) && isset($
 // };
 
  if ($result && mysqli_num_rows($result) > 0) {
-     $_SESSION["id"] = $row['id'];
+     $_SESSION["id"] = $result['id'];
      $_SESSION["username"] = $result['username']
-     $_SESSION['']
+     $_SESSION['school_name'] = $result['school']
 
     header("Location:dashboard.php");
     exit();

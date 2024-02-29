@@ -1,3 +1,7 @@
+<?php
+session_start()
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +20,7 @@
                 <li>
                     <a href="#" class="logo">
                         <img src="Screenshot 2024-01-18 161009.png  ">
-                        <span class="nav-item">DOS</span>
+                        <span class="nav-item"><?php  echo $_SESSION['username'] ?></span>
                     </a> 
                 </li>
                 <li><a href="dashboard.php">
