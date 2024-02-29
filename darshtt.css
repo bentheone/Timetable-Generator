@@ -101,8 +101,25 @@ a:hover i{
 
 }
 .main-top h1{
-    align-items: center;
+    font-size: 18px;
+    justify-content: center;
+    font-family: Century 'Gothic';
+    color:#34AF6D;
+    padding-left: 450px;
 }
+.main-top h2{
+    font-size: 18px;
+    justify-content: center;
+    font-family: Century 'Gothic';
+    color: #fff;
+}
+.main-top h3{
+    font-size: 18px;
+    justify-content: center;
+    font-family: Century 'Gothic';
+    color:#34AF6D;
+}
+
 .main-top i{
     position: absolute;
     right: 0;
@@ -237,3 +254,11 @@ table thead tr{
     color: #fff;
     transition: 0.5rem;
 }
+input{
+    width: 80px;
+    position: relative;
+    border-radius: 20px;
+    border:1px solid #34AF6D ;
+    padding: 10px 10px;
+  
+  }

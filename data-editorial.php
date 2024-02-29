@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-compatible" content="ie=edge">
-        <title>TT GENERATOR</title>
-        <link rel="stylesheet" href="tform.css"><style>
- 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATA | EDITORIAL</title>
+    <link rel="stylesheet" href="darshtt.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlTt..."/>
+<link rel="stylesheet" href="font awesome/css/all.css">
+<script type="module" src="data-edit.js"></script>
+    <style>
 
-#loadButton {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: 1px green;
-    color: green;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+body {
+    transition: filter 0.3s ease;
+}
+
+.container {
+    position: relative;
 }
 
 #loadingOverlay {
@@ -25,60 +25,135 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
-    z-index: 999;
 }
 
 .overlayContent {
-
+    text-align: center;
 }
+
 .svg_icon {
-    background: none;
+    width: 100px;
+    height: 100px;
+}
+
+.overlayActive body {
+    filter: brightness(0.7);
 }
 
     </style>
-        </head>
-   <body class="dashboard">
-        <h2>The information you have about teachers</h2>
-        <table><th></th><th>teacher</th><th>class</th><th>course</th><th>max_daily</th><th>sessions</th>
-            <tr><td>1 |</td><td>REVOCATE <td>L4SODB</td> <td>BACKEND</td></td>
-                <td contenteditable = "true">2</td>
-                <td><input class="ses" type="number" placeholder="2" ></td>
-            
-            <tr><td>2 |</td><td>DAVID <td>L4SODB</td> <td>PHP</td></td> 
-                <td contenteditable = "true">2</td>
-                <td contenteditable = "true">2</td>
-            
-            <tr><td>3 |</td><td>CLAUDINE <td>L4SODB</td> <td>NODE</td></td> 
-                <td contenteditable = "true">2</td>
-                <td contenteditable = "true">2</td>
-            </td>
-            <tr><td>4 |</td><td>Venant <td>L4SODB</td> <td>MATH</td></td>
-                <td contenteditable = "true">2</td>
-                <td contenteditable = "true">2</td>
-            </td>
-            <tr><td>5 |</td><td>Eliab <td>L4SODB</td> <td>ENGLISH</td></td>
-                <td contenteditable = "true">2</td>
-                <td contenteditable = "true">2</td>
-            
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" class="logo">
+                        <img src="Screenshot 2024-01-18 161009.png">
+                        <span class="nav-item">Admin</span>
+                    </a> 
+                </li>
+                <li><a href="#">
+                    <i class=" fas fa-menorah"></i>
+                    <span class="nav-item">Darshboard</span>
 
+                </a></li>
+                <li><a href="#">
+                    <i class=" fas fa-comment"></i>
+                    <span class="nav-item">About us </span>
 
+                </a></li>
+                <li><a href="#">
+                    <i class=" fas fa-sign-out-alt"></i>
+                    <span class="nav-item">Login</span>
 
-        </table>
-        <a href="log in phases.html"><button type="save" name="save" class="st"><span></span><img class="pic" src="arrows.png" >Back</button></a>
-        <a href=""></a><button id="loadButton" onclick="runFunctions()"type="save" name="save" class="st" ><span></span><img class="pic" src="gth.jpg">Generate</button>
-      <a href="log in phases.html"><button type="save" name="save" class="st"><span></span><img class="pic" src="asfr.jpg">Startafresh</button></a>
-      <div id="loadingOverlay">
-        <div class="overlayContent">
-            <!-- Include your animated SVG file using the object tag -->
-            <object type="image/svg+xml" data="generating-animation.svg" width="100" height="100" class="svg_icon">
                
-            </object>
-        </div>
-    </div>
+                <li><a href="#">
+                    <i class=" fas fa-cog"></i>
+                    <span class="nav-item">Settings</span>
 
+                </a></li>
+                <li><a href="#" class="logout">
+                    <i class=" fas fa-sign-out-alt"></i>
+                    <span class="nav-item">Log out</span>
+
+                </a></li>
+            </ul>
+        </nav>
+
+
+
+        <section class="main">
+            <div class="main-top">
+                <h1>DATA</h1>
+                <h2>EDITORIAL</h2>
+                <h3>PAGE</h3>
+                <i class="fas fa-user-cog"></i>
+            </div>
+    <section class="Attendance">
+                <div class="attendance-list">
+                   
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Teacher's name</th>
+                                <th>class</th>
+                                <th>courses</th>
+                                <th>Max_daily</th>
+                                <th>Sessions</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                            
+                        </tbody>
+                            <th>
+                                <button type="button" class="button1">
+                                    <div class="button-text1" onclick="enableEditMode()">BACK</div>
+                                    <div class="button-icon">
+                                        <ion-icon name="arrow-back-circle-outline"></ion-icon>
+                                    </div>
+                                </button>
+                                <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    
+                            </th>
+                            <th>
+                                <button type="button" class="button1"onclick="runFunctions()"type="save" name="save" class="st" >
+                                    <div class="button-text1" >GENERATE</div>
+                                    <div class="button-icon">
+                                        <ion-icon name="cloud-upload-outline"></ion-icon>
+                                    </div>
+                                </button>
+                                <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    
+                            </th>
+                            <th>
+                                <button type="button" class="button1">
+                                    <div class="button-text1" onclick="enableEditMode()">START A FRESH</div>
+                                    <div class="button-icon">
+                                        <ion-icon name="snow-outline"></ion-icon>
+                                    </div>
+                                </button>
+                                <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    
+                            </th>
+                           
+                        
+                        </table>
+                    <div id="loadingOverlay">
+                        <div class="overlayContent">
+                            <object type="image/svg+xml" data="generating-animation.svg" width="100" height="100" class="svg_icon">
+                            
+                            </object>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
     <script>
         function runFunctions(){
             showOverlay();
@@ -99,5 +174,5 @@
 }
 
     </script>
-   </body>   
-   </html>  
+</body>
+</html>

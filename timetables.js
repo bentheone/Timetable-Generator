@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
 
 
-const timetablesSection = document.getElementsByClassName('Attendance')[0]
+const timetablesSection = document.getElementsByClassName('Attendance')[0];
 function createTimetable(timetable){
     const table = document.createElement('div');
     table.classList.add('attendance-list')
