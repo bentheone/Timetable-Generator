@@ -262,3 +262,7 @@ input{
     padding: 10px 10px;
   
   }
+  .user-info {
+    width: 60px;
+    background-color: #34AF6D;
+  }

@@ -20,7 +20,10 @@ session_start()
                 <li>
                     <a href="#" class="logo">
                         <img src="Screenshot 2024-01-18 161009.png  ">
-                        <span class="nav-item"><?php  echo $_SESSION['username'] ?></span>
+                        <div style= "width : 100px; margin-top: 15px;">
+                        <span class=""><?php  echo $_SESSION['username'] ?></span><br><br>
+                        <small class = ""><?php  echo $_SESSION['school_name'] ?></small>
+                        </div>
                     </a> 
                 </li>
                 <li><a href="dashboard.php">
@@ -142,5 +145,7 @@ session_start()
         </section>
     </div>
     
+    <script>
+                </script>
 </body>
 </html>

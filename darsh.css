@@ -1,6 +1,6 @@
 
 
-        @import url('https://fonts.googleapis.com/css?Poppins:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css?Montserrat:wght@400;500;600;700&display=swap');
         *{
             margin: 0;
             padding: 0;
@@ -106,6 +106,25 @@
             margin: 10px 30px;
             color: rgb(110, 109, 109);
             cursor: pointer;
+        }
+        .main-top h1{
+            font-size: 25px;
+            justify-content: center;
+            font-family: Century 'Gothic';
+            color:#34AF6D;
+            padding-left: 500px;
+        }
+        .main-top h2{
+            font-size: 25px;
+            justify-content: center;
+            font-family: Century 'Gothic';
+            color: #fff;
+        }
+        .main-top h3{
+            font-size: 25px;
+            justify-content: center;
+            font-family: Century 'Gothic';
+            color:#34AF6D;
         }
         
         .main .users{
@@ -226,57 +245,5 @@
             color: #fff;
             transition: 0.5rem;
         }
-        /**
-        
-          
-        button{
-            width: 200px;
-            padding: 15px 0;
-            text-align: center;
-            margin: 25px 0 0 1000px;
-            border-radius: 25px;
-            font-weight: bold;
-            border: 1 solid #34AF6D;
-            color: #000;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            background: transparent;
-           }
-          **/
-          p{
-            background-color:#4AD489;
-            height: 100%;
-            width: 0;
-            border-radius: 25px;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            z-index: -1;
-            transition: 0.5s;
-          }
-         
-          button:hover span{
-            width: 100%;
-          }
-          button:hover{
-            border: 1;
-          }
-          
-          .save-btn{
-            display: none;
-            right: 100px;
-          }
-          
-          .edit-btn{
-          right: 100px;
-          }
-          
-          .edit-btn:hover{
-            background-color: #34AF6D ;
-            
-          }
-          
-          .save-btn{
-            background-color: #34AF6D;
-          }
+       
+     

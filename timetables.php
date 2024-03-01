@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="darsh.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlTt..."/>
 <link rel="stylesheet" href="font awesome/css/all.css">
-    <!--cdn link -->
 </head>
 <body>
     <div class="container">
@@ -76,6 +75,7 @@
             </section>
         </section>
     </div>
-    <script type="module" src="./timetables.js"></script>
 </body>
+    <script type="module" src="./timetables.js"></script>
+    
 </html>

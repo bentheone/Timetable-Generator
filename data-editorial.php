@@ -6,7 +6,6 @@
     <title>DATA | EDITORIAL</title>
     <link rel="stylesheet" href="darshtt.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlTt..."/>
-<link rel="stylesheet" href="font awesome/css/all.css">
 <script type="module" src="data-edit.js"></script>
     <style>
 
@@ -108,7 +107,7 @@ body {
                             </tr>
                         </thead>
                         <tbody id="tbody">
-                            
+
                         </tbody>
                             <th>
                                 <button type="button" class="button1">
