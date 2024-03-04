@@ -59,7 +59,7 @@
         </div>
     </div>
 
-    <script>
+    t>
         function runFunctions(){
             showOverlay();
             triggerPrintCoursesFunction();

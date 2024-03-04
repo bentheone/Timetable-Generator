@@ -9,7 +9,7 @@ include './loginOp.php'
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="stytles.css">
         <title>LoginTT - Generator</title>
-        <script>
+        >
     function hideMessage() {
       setTimeout(function() {
         document.getElementById('error-message').style.display = 'none';
@@ -70,7 +70,7 @@ include './loginOp.php'
 
 
                        
-        <script>
+        >
            function myMenuFunction() {
             var i = document.getElementById("navMenu");
 
@@ -81,7 +81,7 @@ include './loginOp.php'
             }
            } 
         </script>
-        <script>
+        >
             var a = document.getElementById("loginBtn");
             var b = document.getElementById("registerBtn");
             var x = document.getElementById("login");

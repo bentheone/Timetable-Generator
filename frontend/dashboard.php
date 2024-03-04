@@ -130,7 +130,7 @@ session_start()
                                     <ion-icon name="add-circle-outline"></ion-icon>
                                 </div>
                             </button>
-                            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+                             type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 
                         </th>
                        
@@ -145,7 +145,7 @@ session_start()
         </section>
     </div>
     
-    <script>
+    >
                 </script>
 </body>
 </html>

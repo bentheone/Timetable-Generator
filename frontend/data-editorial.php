@@ -6,41 +6,10 @@
     <title>DATA | EDITORIAL</title>
     <link rel="stylesheet" href="darshtt.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlTt..."/>
-<script type="module" src="data-edit.js"></script>
+<script type="module" src="../backend/data-edit.js"></script>
     <style>
 
-body {
-    transition: filter 0.3s ease;
-}
 
-.container {
-    position: relative;
-}
-
-#loadingOverlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-}
-
-.overlayContent {
-    text-align: center;
-}
-
-.svg_icon {
-    width: 100px;
-    height: 100px;
-}
-
-.overlayActive body {
-    filter: brightness(0.7);
-}
 
     </style>
 </head>

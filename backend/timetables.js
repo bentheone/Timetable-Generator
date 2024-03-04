@@ -104,7 +104,9 @@ function createTimetable(timetable){
                 <td id = "cell-49" contenteditable="false" class='course_cell'></td>
                
                 
-            </tr><th>
+            </tr>
+            </th>
+            <th>
             <button type="button" class="editBtn">
                 <div class="button-text1">EDIT</div>
                 <div class="button-icon">

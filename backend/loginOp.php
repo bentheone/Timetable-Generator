@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['password']) && isset($
   $result = mysqli_query($conn, $sql);
 
 //   if ($result && mysqli_num_rows($result) > 0) {
-//     <script>
+//     t>
 //     header("Location: dashboard.php");
 //         exit();
 //   }else {

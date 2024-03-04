@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="about.css">
     <title>About Us - TimetableGenerator</title>
 </head>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+     type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 
     <header>
         <body>
@@ -39,7 +39,7 @@
 
     </section>
     <a href="darshtt.html" class="back-button">Back</a>
-    <script>
+    >
         function goBack() {
             window.history.back();
         }
