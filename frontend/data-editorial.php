@@ -6,6 +6,7 @@
     <title>DATA | EDITORIAL</title>
     <link rel="stylesheet" href="darshtt.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlTt..."/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <script type="module" src="../backend/data-edit.js"></script>
     <style>
 
@@ -72,6 +73,7 @@
                                 <th>courses</th>
                                 <th>Max_daily</th>
                                 <th>Sessions</th>
+                                <th>Action</th>
                                
                             </tr>
                         </thead>
@@ -139,6 +141,10 @@
     function triggerPrintCoursesFunction() {
     localStorage.setItem('printTimetables', 'true');
     // window.location.href = "anotherPage.html";
+}
+function removeCourse(button){
+    var row = button.parentNode.parentNode
+    row.parentNode.removeChild(row)
 }
 
     </script>

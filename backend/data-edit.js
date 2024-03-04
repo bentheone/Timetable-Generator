@@ -8,6 +8,7 @@ for(const teacher of teachers){
         const className = classroom.name;
         for (let i = 0; i < classroom.courses.length; i++) {
             let tr = document.createElement("tr")
+            tr.id = `row`;
             tr.innerHTML = `
             <td>${++rowNumber} |</td>
             <td>${tname}</td>
@@ -15,8 +16,10 @@ for(const teacher of teachers){
             <td>${classroom.courses[i].name}</td>
             <td contenteditable="true">${classroom.courses[i].max_p_week}</td>
             <td contenteditable="true">${classroom.courses[i].sessions}</td>
+            <td contenteditable="false"><button onclick="return removeCourse(this)"><span>&times;</button></span></td>
             `
             tableBody.appendChild(tr)
         }
     }
 }
+
