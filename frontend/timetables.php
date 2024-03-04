@@ -25,7 +25,7 @@ include './header.php';
     100% {
         background-position: 100% 100%;
     }
-
+}
 </style>
             </section>
         </section>

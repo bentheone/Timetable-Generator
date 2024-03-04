@@ -102,7 +102,7 @@
                             </th>
                             <th>
                                 <button type="button" class="button1">
-                                    <div class="button-text1" onclick="enableEditMode()">START A FRESH</div>
+                                    <div class="button-text1" onclick="goToTeachersPage()">Add Teacher</div>
                                     <div class="button-icon">
                                         <ion-icon name="snow-outline"></ion-icon>
                                     </div>
@@ -145,6 +145,10 @@
 function removeCourse(button){
     var row = button.parentNode.parentNode
     row.parentNode.removeChild(row)
+}
+
+function goToTeachersPage(){
+    window.location.href = "log in phases.html"
 }
 
     </script>
