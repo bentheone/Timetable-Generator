@@ -125,12 +125,12 @@ session_start()
                         <tbody>
                             <th>
                             <button type="button" class="button1">
-                                <a href="data-editorial.php" class="button-text1">add new TT</a>
+                                <a href="data-editorial.php" class="button-text1">New Timetable</a>
                                 <div class="button-icon">
                                     <ion-icon name="add-circle-outline"></ion-icon>
                                 </div>
                             </button>
-                             type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+                            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 
                         </th>
                        
@@ -145,7 +145,7 @@ session_start()
         </section>
     </div>
     
-    >
+    <script>
                 </script>
 </body>
 </html>

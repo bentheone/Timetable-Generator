@@ -11,12 +11,12 @@ if (selectedClass && selectedTeacher) {
     console.log("No data")
 }
 
-const tbody = document.getElementById('tbody');
+const tbody = document.getElementById('table-body');
 const teacher = teachers.find(teach => teach.name === selectedTeacher);
 if (teacher) {
     const classrooms = teacher.classrooms;
     console.log(classrooms)
-    const classroom = classrooms.find(room => room == selectedClass);
+    const classroom = classrooms.find(room => room.name == selectedClass);
 
     if (classroom) {
         const courses = classroom.courses;

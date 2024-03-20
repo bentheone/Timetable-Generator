@@ -1,6 +1,6 @@
 <?php
 session_start();
-include './dbcon.php';
+include 'dbcon.php';
 $errMsg = "";
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['password']) && isset($_POST['username'])) {
   $username=mysqli_real_escape_string($conn,$_POST['username']);
@@ -23,9 +23,9 @@ if ($result && mysqli_num_rows($result) > 0) {
   $_SESSION["id"] = $row['id'];
   $_SESSION["username"] = $row['username'];
   $_SESSION['school_name'] = $row['school'];
-  $_SESSION['office'] = $row['office']
+  $_SESSION['office'] = $row['office'];
 
-  header("Location: dashboard.php");
+  header("Location: ../frontend/dashboard.php");
   exit();
     }else {
       $errMsg = 'Invalid username or password !';

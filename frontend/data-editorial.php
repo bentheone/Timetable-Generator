@@ -148,7 +148,7 @@ function removeCourse(button){
 }
 
 function goToTeachersPage(){
-    window.location.href = "log in phases.html"
+    window.location.href = "teacher-entry.html"
 }
 
     </script>

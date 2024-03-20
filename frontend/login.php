@@ -1,5 +1,5 @@
 <?php 
-include './loginOp.php'
+include '../backend/loginOp.php';
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@ include './loginOp.php'
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="stytles.css">
         <title>LoginTT - Generator</title>
-        >
+        <script>
     function hideMessage() {
       setTimeout(function() {
         document.getElementById('error-message').style.display = 'none';
@@ -30,12 +30,10 @@ include './loginOp.php'
             <i class="fa-solid fa-bars" onclick="myMenuFunction()"></i>
         </div>
         </nav>
-        <!---------------form box--------->
         <div class="form-box">
 
 
 
-<!------------login form---------->
 <div class="login-container" id="login">
     <div class="nav-logo">
         <p>Input your username !</p>
@@ -44,7 +42,7 @@ include './loginOp.php'
     <div class="input-box">
         <input type="username" class="input-field" placeholder="username" name="username"required>
         <i class="fa-regular fa-user"></i> 
-    </div>
+    </div><br>
     <div class="input-box">
         <input type="password" class="input-field" placeholder="password" name="password"required>
         <i class="fa-solid fa-lock"></i>
@@ -54,11 +52,11 @@ include './loginOp.php'
     <p style="color: red;" id="error-message"><?php echo $errMsg; ?></p>
         <?php endif; ?>
 
-    </div>
+    </div><br>
     
     
     <div class="input-box">
-        <a href="#"><input type="submit" class="submit" value="Next"></a>
+        <a href="#"><input type="submit" class="submit" value="Next" style= 'background: rgb(116, 202, 76);'></a>
     </div>
     </form>
     </div>
@@ -70,7 +68,7 @@ include './loginOp.php'
 
 
                        
-        >
+        <script>
            function myMenuFunction() {
             var i = document.getElementById("navMenu");
 
@@ -81,7 +79,7 @@ include './loginOp.php'
             }
            } 
         </script>
-        >
+        <script>
             var a = document.getElementById("loginBtn");
             var b = document.getElementById("registerBtn");
             var x = document.getElementById("login");
