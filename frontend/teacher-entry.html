@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Login</title>
+    <link rel="stylesheet" href="style3.css">
+
+<style>
+    .form-group {
+        margin-bottom: 20px;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+    .suggested-names {
+        position: absolute;
+        background-color: rgba(226, 226,226);
+        border: 1px solid #4AD489;
+        max-height: 150px;
+        border-radius: 10px;
+        overflow-y: auto;
+        z-index: 1;
+    }
+    .suggested-names > div {
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    .suggested-names > div:hover {
+        background-color: #4AD489;
+    }
+    #suggestions {
+        width: 400px;
+        border: none;
+        overflow-x: hidden;
+    }
+    #suggestions::-webkit-scrollbar {
+    width: 12px;
+    }
+
+    #suggestions::-webkit-scrollbar-thumb:hover {
+    background: #adff76;
+    }
+
+    #suggestions::-webkit-scrollbar-thumb {
+    background: #94b380;
+    border-radius: 4px;
+    margin: 3px;
+    }
+
+    #suggestions::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+    }
+    li {
+        width: 385px;
+        background-color: #c8fdc1;
+        color: black;
+        height: 50px;
+        cursor: pointer;
+        display: block;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+    }
+    li:hover {
+        background-color: #7c9c77;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h2>Enter teacher's Name</h2>
+        <form id="teacherForm" action="next_login_form.html">
+            <div class="form-group">
+                <label for="teacher_name">Enter Teacher's Name:</label><br>
+                <input type="text" id="teacherInput" name="teacher_name" required>
+                <div class="suggested-names" id="suggestions"></div>
+            </div>
+           <input type="submit" class="next-link"  value="Next">
+        </form>
+    </div>
+<script type="module" src="../backend/teacher-process.js"></script>
+<script type="module" src="../backend/teachers.js"></script>    
+</body>
+</html>
