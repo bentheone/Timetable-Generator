@@ -80,10 +80,9 @@
 </head>
 <body>
     <div class="container">
-        <h2>Enter teacher's Name</h2>
-        <form id="teacherForm" action="next_login_form.html">
+        <h2>Enter existing teacher's Name</h2>
+        <form id="teacherForm">
             <div class="form-group">
-                <label for="teacher_name">Enter Teacher's Name:</label><br>
                 <input type="text" id="teacherInput" name="teacher_name" required>
                 <div class="suggested-names" id="suggestions"></div>
             </div>
@@ -92,7 +91,6 @@
         <h2>Or Add New Teacher</h2>
         <form id="newTeacherForm" action="next_login_form.html">
             <div class="form-group">
-                <label for="teacher_name">Enter Teacher's Name:</label><br>
                 <input type="text" id="newTeacherInput" name="teacher_name" required>
             </div>
            <input type="submit" class="next-link"  value="Next"><br><br>

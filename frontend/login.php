@@ -22,7 +22,7 @@ include '../backend/loginOp.php';
         <div class="wrapper">
         <nav class="nav">
         <div class="nav-logo">
-            <p><span>Time</span>table<span>Generator </span></p>
+            <h2 class="paragraph"><span>Time</span>table<span>Generator </span></h2>
         </div>
         
         
@@ -36,7 +36,7 @@ include '../backend/loginOp.php';
 
 <div class="login-container" id="login">
     <div class="nav-logo">
-        <p>Input your username !</p>
+        <h2 class="paragraph">Login Now!</h2>
     </div>
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" onsubmit="return validateForm()">
     <div class="input-box">

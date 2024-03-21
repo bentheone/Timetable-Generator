@@ -1,32 +1,26 @@
 import { teachers } from './teachers.js';
 const timetables = [
     {
-        id:0,
         name:'L4SOD A',
         courses: []
     },
     {
-        id:1,
         name:'L4SOD B',
         courses: ['David', 'Canisius','David','David']
     },
     // {
-    // id:2,    
-    //name:'L3PWO',
+    //     name:'L3PWO',
     //     courses: []
     // },
     {
-        id:2,
         name:'L5SOD A',
         courses: []
     },
     {
-        id:3,
         name:'L4CSA',
         courses: []
     },
     {
-        id:4,
         name:'L4WOT',
         courses: []
     }

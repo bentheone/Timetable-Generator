@@ -1,5 +1,5 @@
 import { timetables } from './index.js';
-// console.log(timetables)
+console.log(timetables)
 document.addEventListener('DOMContentLoaded', function () {
     
 
@@ -143,12 +143,12 @@ function createTimetable(timetable){
     `
     timetablesSection.appendChild(table);
 
-    
+
    
     const currentTable = document.getElementById(`table-${timetable.id}`);
     const cells = currentTable.querySelectorAll('.course_cell');
 
-    let courses = timetable.courses;
+    let courses = timetables[timetable.id].courses;
     for (let i = 0; i < cells.length; i++) {
         cells[i].textContent = courses[i]
         
@@ -180,12 +180,7 @@ function createTimetable(timetable){
     document.getElementById("printBtn").addEventListener("click", function() {
         printDiv(`table-${timetable.id}`);
      });
-    // Add an event listener for the "edit" button within the current table
-    // currentTable.querySelector(".editBtn").addEventListener("click", function () {
-    //     cells.forEach(cell => {
-    //         cell.setAttribute('contenteditable', 'true');
-    //     });
-    // });
+   
 
     
 }
@@ -201,10 +196,7 @@ function createAndDisplayTimetables() {
 const printTimetablesFunction = localStorage.getItem('printTimetables')
     if(printTimetablesFunction === 'true'){
         document.getElementById('noTimetablesYetNotice').style.display='none';
+       }  
     createAndDisplayTimetables();
-    
-    
-  }
-   
 }); 
 

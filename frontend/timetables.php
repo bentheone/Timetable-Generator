@@ -1,4 +1,9 @@
-
+<?php
+session_start();
+if(!isset($_SESSION['username'])){
+    header('Location:login.php');
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,10 +19,13 @@
     <div class="container">
         <nav>
             <ul>
-                <li>
+                <li> 
                     <a href="#" class="logo">
-                        <img src="Screenshot 2024-01-18 161009.png">
-                        <span class="nav-item">DOS</span>
+                        <img src="./images/Screenshot 2024-01-18 161009.png  ">
+                        <div style= "width : 100px; margin-top: 15px;">
+                        <span class=""><?php  echo $_SESSION['username'] ?></span><br><br>
+                        <small class = ""><?php  echo $_SESSION['school_name'] ?></small>
+                        </div>
                     </a> 
                 </li>
                 <li><a href="dashboard.php">
@@ -40,11 +48,13 @@
                     <span class="nav-item">About Us</span>
 
                 </a></li>
-                <li><a href="#" class="logout">
+                
+                <li><form action="./backend/logout.php" method="POST">
+                    <a type= "submit" href="login.php" class="logout">
                     <i class=" fas fa-sign-out-alt"></i>
                     <span class="nav-item">Log out</span>
 
-                </a></li>
+                </a></form></li>
             </ul>
         </nav>
 

@@ -1,3 +1,10 @@
+<?php 
+session_start();
+if(!isset($_SESSION['username'])){
+    header('Location:login.php');
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,11 +13,10 @@
     <link rel="stylesheet" href="about.css">
     <title>About Us - TimetableGenerator</title>
 </head>
-     type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 
     <header>
         <body>
-    
         <h1>About TimetableGen</h1>
     </header>
 
@@ -39,7 +45,7 @@
 
     </section>
     <a href="darshtt.html" class="back-button">Back</a>
-    >
+    <script>
         function goBack() {
             window.history.back();
         }
