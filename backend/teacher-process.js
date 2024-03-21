@@ -1,6 +1,6 @@
 import { teachers } from './teachers.js';
 
-const teachersArray = getTeachers();
+const teachersArray = getTeachers()
 
 
 function getTeachers(){
@@ -50,3 +50,12 @@ document.getElementById('teacherForm').addEventListener('submit', function (even
 function filterTeachers(searchTerm) {
     return teachersArray.filter(teacher => teacher.toLowerCase().includes(searchTerm));
 }
+
+const newTeacherForm = document.getElementById('newTeacherForm');
+newTeacherForm.addEventListener('submit',function (e){
+    e.preventDefault()
+    const newTeacherInput = document.getElementById('newTeacherInput');
+    const newTeacher = newTeacherInput.value;
+    localStorage.setItem('newTeacher',newTeacher);
+    window.location.href = 'classes.html'
+})

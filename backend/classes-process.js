@@ -1,5 +1,10 @@
 import { teachers } from "./teachers.js";
-const selectedTeacher = sessionStorage.getItem('selectedTeacher');
+const newTeacher = localStorage.getItem('newTeacher');
+let selectedTeacher = sessionStorage.getItem('selectedTeacher');
+if(newTeacher){
+    selectedTeacher= newTeacher;
+    localStorage.removeItem('newTeacher');
+}
 const classesDiv = document.getElementById('classesDiv');
 const selectedTeach = teachers.find(teacher => teacher.name === selectedTeacher);
 const teacherHeader = document.getElementById('teacherTeaches');

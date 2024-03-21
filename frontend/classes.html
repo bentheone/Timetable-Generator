@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teacher Teaches</title>
     <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="style3.css">
 
 </head>
 <body>
@@ -15,9 +16,20 @@
                 <div id="classesDiv">
                 </div>
             </div>
-            <div class="form-group">
-                <a href="teacher-entry.html" class="back-link">Back</a>
-            </div>
+            <h2 id="">Or Add New Class</h2>
+            <form id="newTeacherForm" action="next_login_form.html">
+                <div class="form-group">
+                    <select id="newClassInput" name="class_name" required>
+                    <option value="L5 SOD A">L5 SOD A</option>
+                    <option value="L4 SOD A">L4 SOD A</option>
+                    <option value="L4 SOD B">L4 SOD B</option>
+                    <option value="L4 CSA">L4 CSA</option>
+                    <option value="L4 WOT">L4 WOT</option>
+                </select>
+                </div>
+               <input type="submit" class="next-link"  value="Next"><br><br>
+                <a class="next-link" href="teacher-entry.html">Back</a>
+            </form>
         </form>
     </div>
     <script type="module" src="../backend/classes-process.js"></script>

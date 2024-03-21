@@ -149,13 +149,11 @@ function createTimetable(timetable){
     const cells = currentTable.querySelectorAll('.course_cell');
 
     let courses = timetable.courses;
-    courses.forEach((course, index) => {
-        const cellId = `cell-${index}`;
-        const cell = currentTable.querySelector(`#${cellId}`);
-        if (cell) {
-            cell.textContent = course;
-        }
-    });
+    for (let i = 0; i < cells.length; i++) {
+        cells[i].textContent = courses[i]
+        
+    }
+   
 
 
     function printDiv(divId) {

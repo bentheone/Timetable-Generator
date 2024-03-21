@@ -30,6 +30,7 @@ if (teacher) {
             `;
             tbody.appendChild(tr);
         });
+        
     } else {
         console.log("Classroom not found");
     }

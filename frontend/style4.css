@@ -84,7 +84,7 @@ input[type="number"] {
     text-decoration: none;
     border-radius: 30px;
     transition: background-color 0.3s ease;
-    position: relative;
+    
 
 }
 
@@ -134,4 +134,21 @@ input[type="number"] {
 
 .form-group .class-link.selected {
     background-color: #4ad489;
+}
+#newTeacherInput {
+    width: 200px; /* Set width as desired */
+    padding: 8px; /* Add padding for better appearance */
+    border: 1px solid #ccc; /* Add a border for clarity */
+    border-radius: 5px; /* Add rounded corners */
+    background-color: lightgreen; /* Set background color */
+    color: #333; /* Set text color */
+    font-size: 16px; /* Set font size */
+    font-family: Arial, sans-serif; /* Set font family */
+}
+
+/* Style the option elements */
+#newTeacherInput option {
+    background-color: white; /* Set background color of options */
+    color: #333; /* Set text color of options */
+    font-size: 14px; /* Set font size of options */
 }
